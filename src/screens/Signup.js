@@ -5,42 +5,9 @@ export default function Signup() {
   const [credentials, setCredentials] = useState({ name: "", email: "", password: "", location: "" })
   //let [address, setAddress] = useState("");
   let navigate = useNavigate()
-
-  /*const handleClick = async (e) => {
-    e.preventDefault();
-    let navLocation = () => {
-      return new Promise((res, rej) => {
-        navigator.geolocation.getCurrentPosition(res, rej);
-      });
-    }
-    /*let latlong = await navLocation().then(res => {
-      let latitude = res.coords.latitude;
-      let longitude = res.coords.longitude;
-      return [latitude, longitude]
-    })
-    http://localhost:5000
-    // console.log(latlong)
-    let [lat, long] = latlong
-    console.log(lat, long)
-    const response = await fetch("http://localhost:5000/api/auth/getlocation", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ latlong: { lat, long } })
-
-    });
-    const { location } = await response.json()
-    console.log(location);
-    setAddress(location);
-    setCredentials({ ...credentials, [e.target.name]: location })
-  }*/
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://foodorderbackend-a1vg.onrender.com/api/auth/createuser", {
-      // credentials: 'include',
-      // Origin:"http://localhost:3000/login",
+    const response = await fetch("http://localhost:5000/api/auth/createuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -67,7 +34,7 @@ export default function Signup() {
   }
 
   return (
-    <div style={{ backgroundImage: 'url("https://image.freepik.com/free-photo/food-packaging-yellow-background-quarantine-food-delivery-home-flatlay-banner-with-copyspace_168091-166.jpg")', backgroundSize: 'cover',height: '100vh' }}>
+    <div style={{ backgroundImage: 'url("")', backgroundSize: 'cover',height: '100vh' }}>
       <div>
       <Navbar />
       </div>

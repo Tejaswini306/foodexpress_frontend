@@ -19,7 +19,7 @@ export default function Cart() {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
     // console.log(data,localStorage.getItem("userEmail"),new Date())
-    let response = await fetch("https://foodorderbackend-a1vg.onrender.com/api/auth/orderData", {
+    let response = await fetch("http://localhost:5000/api/auth/orderData", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',
@@ -72,9 +72,6 @@ export default function Cart() {
           <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Order Now!! </button>
         </div>
       </div>
-
-
-
     </div>
   )
 }
