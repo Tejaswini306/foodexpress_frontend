@@ -34,7 +34,7 @@ export default function Signup() {
   }
 
   return (
-    <div style={{ backgroundImage: 'url("")', backgroundSize: 'cover',height: '100vh' }}>
+    <div style={{ backgroundImage: 'url("https://wallpapercave.com/wp/wp3138532.jpg")', backgroundSize: 'cover',height: '100vh' }}>
       <div>
       <Navbar />
       </div>
